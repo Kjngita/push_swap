@@ -6,55 +6,53 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:25:00 by gita              #+#    #+#             */
-/*   Updated: 2025/06/27 22:30:07 by gita             ###   ########.fr       */
+/*   Updated: 2025/06/28 16:59:45 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps_header.h"
-int	error_msg(int err)
+int	error_msg
 {
 	write(1, "Error\n", 6);
-	return (0);
+	return (2);
 }
 
 int	main(int ac, char **av)
 {
+	char	**splitted_arg;
 	size_t	i;
-	int		arr;
-	size_t	a;
-	size_t	b;
+	int		*arr;
 
-	if (ac < 3)
-		return (0);
+	if (ac < 2)
+		return (error_msg);
+	if (ac == 2)
+	{
+		splitted_arg = ft_split(av); // add ft_split
+		if (splitted_arg == NULL)
+			return (error_msg);
+		i = 0;
+		while (splitted_arg[i])
+			i++;
+		if (i < 2)
+			return (error_msg);
+	}
 	i = 1;
 	while (*av[i])
 	{
 		if (!(*av[i] >= 0 && *av[i] <= 9) || *av[i] != ' '
 			|| !(*av[i] >= 9 && *av[i] <= 13) || *av[i] != '+' || *av[i] != '-')
-			return (error_msg(2));
+			return (error_msg);
 		i++;
 	}
-	i = 1;
-	a = 0;
-	arr = malloc ((ac - 1) * sizeof(int));
+	i = 0;
+	arr = malloc((ac - 1) * sizeof(int));
 	if (!arr)
 		return (error_msg(2));
-	while (*av[i])
+	while (arr[i])
 	{
-		arr[a++] = ps_atoi(*av[i++]);
-		if (arr[a] < INT_MIN || arr[a] > INT_MAX)
-			return (error_msg(2));
-	}
-	a = 0;
-	while (arr[a])
-	{
-		b = a; 
-		while (b < ac - 1)
-		{
-			if arr[a] == arr[b]
-				return (error_msg(2))
-			b++;
-		}
-		a++;
+		arr[i] = ps_atoi(*av[i + 1]);
+		if (arr[i] < INT_MIN || arr[i] > INT_MAX)
+			return (error_msg);
+		i++;
 	}
 }
