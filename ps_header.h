@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/06/27 22:22:39 by gita             ###   ########.fr       */
+/*   Updated: 2025/06/29 20:32:59 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include <limits.h>
 
 int	ps_atoi(const char *str);
+char	**ps_split(char const *s, char sep);
 
 #endif

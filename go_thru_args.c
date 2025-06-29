@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:25:00 by gita              #+#    #+#             */
-/*   Updated: 2025/06/28 16:59:45 by gita             ###   ########.fr       */
+/*   Updated: 2025/06/29 20:36:18 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 		return (error_msg);
 	if (ac == 2)
 	{
-		splitted_arg = ft_split(av); // add ft_split
+		splitted_arg = ps_split(av[1], ' ');
 		if (splitted_arg == NULL)
 			return (error_msg);
 		i = 0;
