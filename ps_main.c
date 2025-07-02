@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_header.h                                        :+:      :+:    :+:   */
+/*   ps_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 00:32:42 by gita             ###   ########.fr       */
+/*   Created: 2025/06/30 15:00:15 by gita              #+#    #+#             */
+/*   Updated: 2025/07/03 01:17:58 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_HEADER_H
-# define PS_HEADER_H
+#include "ps_header.h"
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	int	*stack_a;
+	// int	*stack_b;
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-
-long	ps_atoi(const char *str);
-
-void	error_msg(void);
-int		*parse_args(int ac, char **av);
-
-
-#endif
+	stack_a = parse_args(ac, av);
+	int i = 0;
+	while (i++ < ac - 2)
+		printf("Stack_a '%i'\n", stack_a[i]);
+}
