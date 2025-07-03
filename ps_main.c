@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 15:00:15 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 01:17:58 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/03 20:10:18 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 #include <stdio.h>
 int	main(int ac, char **av)
 {
-	int	*stack_a;
-	// int	*stack_b;
+	t_stack	stack_a;
+	t_stack	stack_b;
 
-	stack_a = parse_args(ac, av);
-	int i = 0;
-	while (i++ < ac - 2)
-		printf("Stack_a '%i'\n", stack_a[i]);
+	stack_a.arr = parse_args(ac, av);
+	stack_b.arr = malloc ((ac - 1) * sizeof(int));
+	
 }

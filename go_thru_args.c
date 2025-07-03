@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:25:00 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 01:15:52 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/03 18:17:51 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	error_msg(void)
 	exit(1);
 }
 
-static int	check_args(int argc, char **argv, int *arr)
+static int	check_arg_value(int argc, char **argv, int *arr)
 {
 	int		i;
 	long	num;
@@ -70,7 +70,7 @@ int	*parse_args(int ac, char **av)
 	chain = malloc ((ac - 1) * sizeof(int));
 	if (!chain)
 		error_msg();
-	if (check_args(ac, av, chain) == 1)
+	if (check_arg_value(ac, av, chain) == 1)
 		error_msg();
 	return (chain);
 }
