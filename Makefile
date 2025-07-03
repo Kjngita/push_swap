@@ -1,7 +1,8 @@
 NAME = push_swap_lib.a
 
 CFILES = go_thru_args.c \
-	ps_atoi.c
+	ps_atoi.c \
+	operations_swap.c operations_push.c operations_rotate.c operations_revrotate.c
 
 OFILES = $(CFILES:.c=.o)
 
