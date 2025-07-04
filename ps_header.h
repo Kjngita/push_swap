@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/04 18:17:57 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/04 20:56:57 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_stack
 	int	len;
 }	t_stack;
 
-void	error_msg(void);
 long	ps_atoi(const char *str);
 int		*parse_args(int ac, char **av);
 
@@ -39,5 +38,7 @@ void	rra(t_stack stack_a);
 void	rrb(t_stack stack_b);
 void	rrr(t_stack stack_a, t_stack stack_b);
 
+void	error_msg(void *freethis);
+void	free_data(t_stack stack_a, t_stack stack_b);
 
 #endif

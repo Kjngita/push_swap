@@ -6,17 +6,11 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:25:00 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 18:17:51 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/04 20:58:09 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps_header.h"
-
-void	error_msg(void)
-{
-	write(1, "Error\n", 6);
-	exit(1);
-}
 
 static int	check_arg_value(int argc, char **argv, int *arr)
 {
@@ -54,7 +48,7 @@ int	*parse_args(int ac, char **av)
 	int	*chain;
 	
 	if (ac == 2)
-		error_msg();
+		error_msg(NULL);
 	i = 1;
 	while (av[i])
 	{
@@ -62,15 +56,15 @@ int	*parse_args(int ac, char **av)
 		while (av[i][j])
 		{
 			if (!((av[i][j] >= '0' && av[i][j] <= '9') || av[i][j] == '+' || av[i][j] == '-'))
-				error_msg();
+				error_msg(NULL);
 			j++;
 		}
 		i++;
 	}
 	chain = malloc ((ac - 1) * sizeof(int));
 	if (!chain)
-		error_msg();
+		return (NULL);
 	if (check_arg_value(ac, av, chain) == 1)
-		error_msg();
+		error_msg(chain);
 	return (chain);
 }
