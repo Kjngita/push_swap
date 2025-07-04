@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 22:42:59 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/04 18:17:57 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		*parse_args(int ac, char **av);
 void	sa(t_stack stack_a);
 void	sb(t_stack stack_b);
 void	ss(t_stack stack_a, t_stack stack_b);
-void	p2a(t_stack stack_a, t_stack stack_b);
-void	p2b(t_stack stack_a, t_stack stack_b);
+void	p2a(t_stack *stack_a, t_stack *stack_b);
+void	p2b(t_stack *stack_a, t_stack *stack_b);
 void	ra(t_stack stack_a);
 void	rb(t_stack stack_b);
 void	rr(t_stack stack_a, t_stack stack_b);

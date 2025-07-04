@@ -6,12 +6,32 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 15:00:15 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 23:05:06 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/04 18:33:23 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps_header.h"
-#include <stdio.h>
+
+
+// #include <stdio.h>
+// void	print_stack(t_stack stack_a, t_stack stack_b)
+// {
+// 	int i = 0;
+// 	printf("\nStack_a: ");
+// 	while (i < stack_a.len)
+// 	{
+// 		printf("'%i'", stack_a.arr[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	printf("\nStack_b: ");
+// 	while (i < stack_b.len)
+// 	{
+// 		printf("'%i'", stack_b.arr[i]);
+// 		i++;
+// 	}
+// }
+
 int	main(int ac, char **av)
 {
 	t_stack	stack_a;
@@ -24,34 +44,13 @@ int	main(int ac, char **av)
 	
 	
 
-	int i = 0;
-	printf("Stack_a: ");
-	while (i < stack_a.len)
-	{
-		printf("'%i'", stack_a.arr[i]);
-		i++;
-	}
-	i = 0;
-	printf("\nStack_b: ");
-	while (i < stack_b.len)
-	{
-		printf("'%i'", stack_b.arr[i]);
-		i++;
-	}
+	// print_stack(stack_a, stack_b);
 	// rra(stack_a);
-	p2b(stack_a, stack_b);
-	i = 0;
-	printf("\nStack_a: ");
-	while (i < stack_a.len)
-	{
-		printf("'%i'", stack_a.arr[i]);
-		i++;
-	}
-	i = 0;
-	printf("\nStack_b: ");
-	while (i < stack_b.len)
-	{
-		printf("'%i'", stack_b.arr[i]);
-		i++;
-	}
+	// print_stack(stack_a, stack_b);
+	// p2b(&stack_a, &stack_b);
+	// print_stack(stack_a, stack_b);
+	// p2b(&stack_a, &stack_b);
+	// print_stack(stack_a, stack_b);
+	// sb(stack_b);
+	// print_stack(stack_a, stack_b);
 }
