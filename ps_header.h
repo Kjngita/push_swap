@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/04 20:56:57 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/07 20:02:11 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	rr(t_stack stack_a, t_stack stack_b);
 void	rra(t_stack stack_a);
 void	rrb(t_stack stack_b);
 void	rrr(t_stack stack_a, t_stack stack_b);
+
+int		algo_worked(t_stack *a, t_stack *b);
 
 void	error_msg(void *freethis);
 void	free_data(t_stack stack_a, t_stack stack_b);
