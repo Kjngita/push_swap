@@ -4,6 +4,9 @@ CFILES = ps_main.c \
 	go_thru_args.c ps_atoi.c \
 	operations_swap.c operations_push.c \
 	operations_rotate.c operations_revrotate.c \
+	moveset1_options.c \
+	moveset2_pickbest.c \
+	moveset3_bringtop.c \
 	cleanup.c
 
 O_DIR = OBJdir

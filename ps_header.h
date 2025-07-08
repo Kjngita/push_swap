@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/07 20:02:11 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/08 23:45:56 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,38 @@
 # include <stdlib.h>
 # include <limits.h>
 
+# ifndef STACK_A
+#  define STACK_A 68
+# endif
+
+# ifndef STACK_B
+#  define STACK_B 86
+# endif
+
 typedef struct s_stack
 {
 	int	*arr;
 	int	len;
 }	t_stack;
+
+typedef struct s_cost
+{
+	int	b_index;
+	int	a_index;
+	int	b_steps;
+	int	a_steps;
+	int	total_steps;
+}	t_cost;
+
+
+
+//DELETEEEEEEEEEEEE
+# include <stdio.h>
+void	print_stack(t_stack stack_a, t_stack stack_b);
+//DELETEEEEEEEEEEEE
+
+
+
 
 long	ps_atoi(const char *str);
 int		*parse_args(int ac, char **av);
@@ -39,6 +66,11 @@ void	rrb(t_stack stack_b);
 void	rrr(t_stack stack_a, t_stack stack_b);
 
 int		algo_worked(t_stack *a, t_stack *b);
+t_cost	best_move(t_stack *a, t_stack *b);
+int		min_value_pos(t_stack stack);
+int		steps_to_top(t_stack stack, int pos);
+void	duo_roll(t_stack *stk_a, t_stack *stk_b, t_cost *best);
+void	bring_to_top(int pos, int steps, t_stack *stack, int stk_code);
 
 void	error_msg(void *freethis);
 void	free_data(t_stack stack_a, t_stack stack_b);
