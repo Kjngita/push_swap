@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/09 16:07:54 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 16:18:38 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_cost
 	int	total_steps;
 }	t_cost;
 
-enum	stk_code
+enum	e_stk_code
 {
 	STACK_A,
 	STACK_B
