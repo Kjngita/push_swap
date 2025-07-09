@@ -6,10 +6,9 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 22:15:17 by gita              #+#    #+#             */
-/*   Updated: 2025/07/09 00:30:07 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 11:35:32 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ps_header.h"
 
@@ -67,22 +66,7 @@ static void	high_stack(t_stack *stack_a, t_stack *stack_b)
 		steps_of_min = steps_to_top(*stack_a, min_pos);
 		bring_to_top(min_pos, steps_of_min, stack_a, STACK_A);
 	}
-// //DELETEEEEEEEEE	
-// 	if (stack_is_sorted(*stack_a))
-// 	{
-// 		printf("Yayyy");
-// 		int i = 0;
-// 		printf("\nStack_a len: %i", stack_a->len);
-// 		printf("\nStack_a: ");
-// 		while (i < stack_a->len)
-// 		{
-// 			printf("\n'%i'", stack_a->arr[i]);
-// 			i++;
-// 		}
-// 	}
-// //DELETEEEEEEEEE
 }
-
 
 int	algo_worked(t_stack *a, t_stack *b)
 {

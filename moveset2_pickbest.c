@@ -6,17 +6,16 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 22:15:40 by gita              #+#    #+#             */
-/*   Updated: 2025/07/08 23:42:23 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 12:17:36 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ps_header.h"
 
 static int	max_value(t_stack stack)
 {
 	int	i;
-	int max;
+	int	max;
 
 	i = 0;
 	max = stack.arr[i];
@@ -32,7 +31,7 @@ static int	max_value(t_stack stack)
 int	min_value_pos(t_stack stack)
 {
 	int	i;
-	int min;
+	int	min;
 	int	pos;
 
 	i = 0;

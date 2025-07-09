@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 20:36:30 by gita              #+#    #+#             */
-/*   Updated: 2025/07/04 20:56:31 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 11:35:48 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	error_msg(void *freethis)
 		free(freethis);
 		freethis = NULL;
 	}
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 

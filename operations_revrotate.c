@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 22:11:26 by gita              #+#    #+#             */
-/*   Updated: 2025/07/04 18:46:18 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 12:18:33 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	rev_rot(t_stack stack)
 {
 	int	i;
-	int temp;
+	int	temp;
 
 	i = stack.len - 1;
 	temp = stack.arr[i];

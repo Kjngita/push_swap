@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/08 23:45:56 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 15:45:20 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 # include <limits.h>
 
 # ifndef STACK_A
-#  define STACK_A 68
+#  define STACK_A 6
 # endif
 
 # ifndef STACK_B
-#  define STACK_B 86
+#  define STACK_B 8
 # endif
 
 typedef struct s_stack
@@ -40,17 +40,6 @@ typedef struct s_cost
 	int	total_steps;
 }	t_cost;
 
-
-
-//DELETEEEEEEEEEEEE
-# include <stdio.h>
-void	print_stack(t_stack stack_a, t_stack stack_b);
-//DELETEEEEEEEEEEEE
-
-
-
-
-long	ps_atoi(const char *str);
 int		*parse_args(int ac, char **av);
 
 void	sa(t_stack stack_a);

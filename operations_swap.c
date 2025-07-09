@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:06:46 by gita              #+#    #+#             */
-/*   Updated: 2025/07/03 20:18:09 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 12:19:12 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	sa(t_stack stack_a)
 		write(1, "sa\n", 3);
 	}
 }
+
 void	sb(t_stack stack_b)
 {
 	if (stack_b.len > 1)
