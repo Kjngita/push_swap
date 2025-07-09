@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:40:03 by gita              #+#    #+#             */
-/*   Updated: 2025/07/09 15:45:20 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 16:07:54 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-
-# ifndef STACK_A
-#  define STACK_A 6
-# endif
-
-# ifndef STACK_B
-#  define STACK_B 8
-# endif
 
 typedef struct s_stack
 {
@@ -39,6 +31,12 @@ typedef struct s_cost
 	int	a_steps;
 	int	total_steps;
 }	t_cost;
+
+enum	stk_code
+{
+	STACK_A,
+	STACK_B
+};
 
 int		*parse_args(int ac, char **av);
 
