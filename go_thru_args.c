@@ -6,13 +6,13 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:25:00 by gita              #+#    #+#             */
-/*   Updated: 2025/07/09 15:41:29 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/09 17:56:35 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps_header.h"
 
-static long	ps_atoi(const char *str)
+static long	ps_atol(const char *str)
 {
 	size_t	i;
 	int		sign;
@@ -34,7 +34,9 @@ static long	ps_atoi(const char *str)
 		num = (num * 10 + str[i]) - '0';
 		i++;
 	}
-	if (str[i] != 0)
+	if (str[i] == 0 && (str[i - 1] == '+' || str[i - 1] == '-'))
+		return (2147483648);
+	else if (str[i] != 0)
 		return (2147483648);
 	return (num * sign);
 }
@@ -48,7 +50,7 @@ static int	check_arg_value(int argc, char **argv, int *arr)
 	i = 1;
 	while (argv[i])
 	{
-		num = ps_atoi(argv[i]);
+		num = ps_atol(argv[i]);
 		if (num < INT_MIN || num > INT_MAX)
 			return (1);
 		arr[i - 1] = num;
@@ -68,6 +70,17 @@ static int	check_arg_value(int argc, char **argv, int *arr)
 	return (0);
 }
 
+static void	check_one_arg(char **av)
+{
+	long	value;
+
+	value = ps_atol(av[1]);
+	if (av[1][0] != 0 && (value >= INT_MIN && value <= INT_MAX))
+		exit (1);
+	else
+		error_msg(NULL);
+}
+
 int	*parse_args(int ac, char **av)
 {
 	int	i;
@@ -75,7 +88,7 @@ int	*parse_args(int ac, char **av)
 	int	*chain;
 
 	if (ac == 2)
-		error_msg(NULL);
+		check_one_arg(av);
 	i = 1;
 	while (av[i])
 	{
