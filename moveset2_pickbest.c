@@ -6,7 +6,7 @@
 /*   By: gita <gita@student.hive.fi>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 22:15:40 by gita              #+#    #+#             */
-/*   Updated: 2025/07/09 12:17:36 by gita             ###   ########.fr       */
+/*   Updated: 2025/07/11 16:56:51 by gita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	target_index(t_stack *stack_a, int b_value)
 		target = INT_MAX;
 		while (i < stack_a->len)
 		{
-			if (stack_a->arr[i] > b_value && stack_a->arr[i] < target)
+			if (stack_a->arr[i] > b_value && stack_a->arr[i] <= target)
 			{
 				pos = i;
 				target = stack_a->arr[i];
