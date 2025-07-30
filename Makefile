@@ -9,7 +9,7 @@ CFILES = ps_main.c \
 	moveset3_bringtop.c \
 	cleanup.c
 
-O_DIR = OBJdir
+O_DIR = objdir
 
 OFILES = $(addprefix $(O_DIR)/,$(CFILES:.c=.o))
 
